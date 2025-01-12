@@ -1,0 +1,50 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* -- for css variables */
+  --dark: #1d1f28;
+  --light: rgb(197, 186, 186);
+  --accent: #1f1e61;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+main {
+  flex: 1;
+  /*flex grows to fill space, shrinks if overflow, and initial size is 0 */
+  display: flex;
+}
+
+#gameCanvas {
+  border: 1px solid rgb(202, 90, 90);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  z-index: 1;
+}
